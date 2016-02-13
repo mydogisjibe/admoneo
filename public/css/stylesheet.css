@@ -1,0 +1,98 @@
+
+.title{
+    font-size:60px;
+    font-family: 'Lobster', 'helvetica';
+    text-align: center;
+    z-index:2;
+    text-decoration:underline;
+}
+
+img{
+    height:170px;
+    border: 6px outset navy;
+    border-radius:50%;
+}
+th{
+    border: 8px inset navy;
+    font-size:30px;
+    font-family: 'Raleway', 'helvetica';
+}
+td{
+    border: 3px inset navy; 
+}
+html,body{
+    height:100%;
+    width:99%;
+    margin-left:10px;
+    text-shadow: 2px 2px 2px #aaa;
+}
+.background{
+  height:100%;
+  width:100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url('http://bennettfeely.com/gradients/img/gradient_8.png');
+  background-size: cover;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.whatis{
+    font-size:20px;
+    font-family:'Raleway', sans-serif;
+    color:black;
+    left: 15px;
+    right: 15px;
+    margin-top:50px;
+    z-index: 2;
+    border: 6px ridge navy;
+}
+.login{
+    z-index:5;
+    position:absolute;
+   top:0;
+   right:0;
+   
+}
+
+table{
+    width:100%;
+    margin-top:50px;
+    border:10px ridge navy;
+}
+.left{
+    width:12.5%;
+}
+.center{
+    width:75%;
+}
+.right{
+    width:12.5%;
+}
+
+.event,.delete{
+    width: 80%;
+    height:100px;
+    margin-left:10%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+ul{
+    font-size:20px;
+    font-family: 'Bitter', serif;
+}
+
+.made{
+    font-size:40px;
+}
