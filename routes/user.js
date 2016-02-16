@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-var urlEncodeParser = require("./../my-body-parser");
+var bodyJSONParser = require('body-parser').json();
 var User = require("./../models/user.js");
 var Reminder = require("./../models/reminder.js");
 
@@ -21,7 +21,7 @@ router.route("/:user")
             res.end();
         });
     })
-    .post(urlEncodeParser, function(req, res){
+    .post(bodyJSONParser, function(req, res){
         console.dir(req.body);
         console.log(req.params.user);
         Reminder.create(req.params.user, req.body.reminder, function(result){
@@ -29,13 +29,13 @@ router.route("/:user")
             res.end();
         });
     })
-    .put(urlEncodeParser, function(req, res){
+    .put(bodyJSONParser, function(req, res){
         Reminder.update(req.params.user, req.body.remindNum, req.body.reminder, function(result){
             res.status(200).json(req.params.user);
             res.end();
         });
     })
-    .delete(urlEncodeParser, function(req, res){
+    .delete(bodyJSONParser, function(req, res){
         Reminder.remove(req.params.user, req.body.remindNum, function(result){
             res.status(200).json(req.params.user);
             res.end();

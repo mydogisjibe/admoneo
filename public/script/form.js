@@ -16,6 +16,7 @@ $(document).ready(function(){
             $.ajax({
                 url: '/api/mydogisjibe',
                 type: 'put',
+                contentType: "application/json; charset=utf-8",
                 dataType: 'json',
                 success: function (data) {
                     window.location.href = "/";
@@ -27,6 +28,7 @@ $(document).ready(function(){
             $.ajax({
                 url: '/api/mydogisjibe',
                 type: 'POST',
+                contentType: "application/json; charset=utf-8",
                 dataType: 'json',
                 success: function (data) {
                     window.location.href = "/";
