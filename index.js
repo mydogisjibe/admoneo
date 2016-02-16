@@ -1,13 +1,9 @@
-var express = require("express");
-var MongoClient = require('mongodb').MongoClient;
-var app = express();
-var assert = require("assert");
-var url = require('url');
+var express     = require("express");
+var url         = require('url');
+var app         = express();
 
 var userRoutes = require("./routes/user");
-var db = require("db");
-
-
+var db = require("./db");
 
 app.use(function(req, res, next){
     console.log(req.url + " " + req.method);
@@ -24,11 +20,9 @@ app.get("/form", function(req, res){
     res.render(__dirname+"/views/form", {data: query});
 });
 
-app.use('/api', userRoutes(db));
+app.use('/api', userRoutes);
 
-MongoClient.connect("mongodb://"+process.env.IP+":27017/test", function(err, db){
-    assert.equal(err, null, "Mongo had an error. ");
-    console.log("Connected to database successfully.");
+db.connectDB(function(){
     
     process.stdout.write("Starting server... ");
     app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
@@ -36,4 +30,3 @@ MongoClient.connect("mongodb://"+process.env.IP+":27017/test", function(err, db)
     });
     
 });
-

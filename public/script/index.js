@@ -39,7 +39,6 @@ function populateList(){
                 return false;
             });
             $("td").click(function(event) {
-                e.preventDefault();
                 if($(this).attr("href") != undefined){
                     window.location.href = $(this).attr("href");
                 }
