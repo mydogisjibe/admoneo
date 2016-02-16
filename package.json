@@ -18,14 +18,8 @@
   "homepage": "https://github.com/mydogisjibe/admoneo#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "cookie-parser": "^1.4.1",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "express-session": "^1.13.0",
-    "mongodb": "^2.1.7",
-    "query-string": "^3.0.0",
-    "request": "^2.69.0",
-    "sparkpost": "^1.1.0",
-    "uuid": "^2.0.1"
+    "mongodb": "^2.1.7"
   }
 }
