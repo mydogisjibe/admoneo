@@ -1,10 +1,11 @@
 var express     = require("express");
 var url         = require('url');
+var favicon     = require("serve-favicon");
 var app         = express();
-
 var userRoutes = require("./routes/user");
 var db = require("./db");
 
+app.use(favicon(__dirname+"/favicon.ico"));
 app.use(function(req, res, next){
     console.log(req.url + " " + req.method);
     next();
